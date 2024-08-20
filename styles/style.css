@@ -1,0 +1,155 @@
+
+/*@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap'); /* linea que importa la fuente del tipo de letra 
+que utilizaremos */
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{ /* variables para cambios de color y fuente de letra */
+    --color-primario:#000000;
+    --color-secundario:#F6F6F6;
+    --color-terciario:#22D4FD;
+    --color-brillo__links:#EAE2B7;
+
+    --fuente-montserrat: "montserrat", sans serif;
+    --fuente-krona:"Krona One", sans-serif;
+    --fuente-franklin:"Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif";
+}
+
+
+*{ /*el asterisco hace que todo dentro de el sera modificado */
+    padding: 0; /* lineas que eliminan los espacios de padding y margin de la ppag web*/
+    margin: 0;
+}
+
+
+body { /* elemento que se conecta con el body del HTML*/
+    background-color: var(--color-primario); /*elemento que cambia el color de fondo de la pag web */
+    color : var(--color-secundario); /* etiqueta que cambia el color de las letras en la pag */
+    /*height: 100vh; /* etiqueta que especifica la altura que utlizaremos del "viewport" */
+    box-sizing: border-box;
+}
+
+/*strong{
+    color: #22D4FD;
+
+}*/
+
+.header{ /* configuracion de las palabras en el encabezado */
+    padding: 2% 0% 0% 15%;
+}
+
+.header__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.header__menu__link{
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color:var(--color-terciario);
+    text-decoration: none;
+}
+
+.presentacion{
+    display: flex; /* liena que especifica como se muestra y el comportamiento de crecimiento del elemento en la pag web*/ 
+    align-items: center; /* propiedad que aliena y centra los elementos en la pag web*/ 
+    /*margin: 10% 10%; /* cantidad en porcentaje que queremos de margen en la pag*/ 
+    padding: 6% 15%;
+    justify-content: space-between; /* aliena los elementos hijos a lo largo del eje del contenedor y distribuye los elementos 
+    para que tengan espacio entre si */ 
+    gap: 82px;
+
+}
+
+.presentacion__contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.presentacion__contenido__titulo{
+    font-size: 2.25rem; /* determina el tamaño de la letra en este caso del titulo */
+    font-family: var(--fuente-krona);
+}
+
+.titulo-destacado{ /* linea que identifica que parte quiere de este color y esta especificado en el HTML */
+    color: var(--color-terciario);
+}
+
+.presentacion__contenido__parrafo{
+    font-size: 1,5;/* determina el tamaño de la letra en este caso del parrafo */
+    font-family: var(--fuente-montserrat);
+}
+
+.presentacion__enlaces { /* linea que da espacio entre los enlaces de instagram y github*/
+    display: flex; /* sirve para posiiconar elementos en la pantalla*/ 
+    justify-content: space-between;
+    flex-direction: column;/* para ponerlos vertical*/
+    align-items: center ;
+    gap: 32px;
+}
+
+.presentacio__enlaces__subtitulo{
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+    
+}
+
+.presentacion__enlaces__link{ /* configuracion de los enlaces*/
+    width: 50%; /* ancho de las cajas que contienen los links */
+    text-align: center; /* linea que centra el texto en medio del contenedor */
+    padding: 21.5px 0; /* espacio entre el contenido y los bordes */
+    border-radius: 8px; /* curvatura de las esquinas de los contenedores */
+    font-family: var(--fuente-montserrat); /* fuente que se utiliza para los links */
+    font-size: 1.5rem; /* tamaño de la fuente*/
+    font-weight: 600; /* ancho de la fuente */ 
+    text-decoration: none; /* decoracion del texto*/
+    color: var(--color-secundario);
+    border: 2px solid var(--color-terciario) ;/*tamaño del borde*/
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* espacio entre el logo y la palabra instagram */
+
+}
+
+.presentacion__enlaces__link:hover{ /*linea que sirve para darle un color a los botones cuando nos paramos encima de ellos */
+
+    background-color: var(--color-brillo__links);
+}
+.presentacion__imagen{
+    width: 50%;
+}
+
+.footer{ /*parte inferior de la pag*/
+    background-color: var(--color-terciario);
+    padding: 24px;
+    text-align: center;
+    color: var(--color-primario);
+    font-family: var(--fuente-franklin);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width:1200px){
+    .header{
+        padding:10% ;
+
+    }
+
+    .header__menu{
+        justify-content: center;
+    }
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .presentacion__contenido{
+        width:auto ;
+    }
+}
+
+
